@@ -2,8 +2,10 @@ import React, {useEffect, useState} from 'react';
 import {View, FlatList, Dimensions} from 'react-native';
 import Post from '../../components/Post/index';
 
-// import {listPosts} from '../../flureeql/queries';
+import {listPosts} from '../../flureeql/queries';
+// import fetchDataFromFluree from '../../backend/api/apiquery';
 import fetchDataFromFluree from '../../backend/api/api';
+
 
 const Home = () => {
   const [posts, setPosts] = useState();

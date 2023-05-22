@@ -1,20 +1,10 @@
 import { FLUREE_DATASET_ID, FLUREE_API_KEY } from '@env';
 
-async function fetchDataFromFluree() {
-    const query ={
-        select: [
-          "*",
-          "videoUri",
-          {
-            "user": ["*"],
-            "song": ["*"],
-          }
-        ],
-        from: "post"
-      };
+async function fetchDataFromFluree(query) {
     const networkName = "fluree";
     const datasetID = FLUREE_DATASET_ID;
     const APIKey = FLUREE_API_KEY;
+  
     const url = `https://api.dev.flur.ee/fdb/${networkName}/${datasetID}`;
     const headers = {
       "Content-Type": "application/json",

@@ -1,10 +1,11 @@
 const listPosts ={
-    select: [
-      "*",
-      {
-        "user": ["*"],
-        "song": ["*"],
-      }
-    ],
-    from: "post"
-  };
+  select: [
+    "*",
+    "videoUri",
+    {
+      "user": ["*"],
+      "song": ["*"],
+    }
+  ],
+  from: "post"
+};
